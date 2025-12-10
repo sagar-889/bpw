@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buzzpay - Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <div class="logo">
+                <h1>Buzzpay</h1>
+            </div>
+        </div>
+
+        <form id="registrationForm" class="registration-form">
+            <!-- Phone Number Input -->
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <span class="icon">📱</span>
+                    <span class="country-code">+91</span>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter phone number" maxlength="10" required>
+                </div>
+                <small class="helper-text">Please enter 10 digit phone number</small>
+            </div>
+
+            <!-- Email Input -->
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <span class="icon">✉️</span>
+                    <input type="email" id="email" name="email" placeholder="Enter email address" required>
+                </div>
+                <small class="helper-text">We'll send OTP to this email</small>
+            </div>
+
+            <!-- Password Input -->
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <span class="icon">🔒</span>
+                    <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                </div>
+                <small class="helper-text">Please enter 6 - 20 characters</small>
+            </div>
+
+            <!-- OTP Input with Send Button -->
+            <div class="input-group">
+                <div class="otp-container">
+                    <div class="input-wrapper otp-input">
+                        <span class="icon">📱</span>
+                        <input type="text" id="otp" name="otp" placeholder="Enter opt code" maxlength="6" required>
+                    </div>
+                    <button type="button" id="sendOtpBtn" class="send-btn">Send</button>
+                </div>
+            </div>
+
+            <!-- Referral Code Input -->
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <span class="icon">👤</span>
+                    <input type="text" id="referralCode" name="referralCode" placeholder="Enter referral code (optional)">
+                </div>
+            </div>
+
+            <!-- Register Button -->
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
