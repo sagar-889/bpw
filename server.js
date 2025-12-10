@@ -26,8 +26,8 @@ const emailTransporter = nodemailer.createTransport({
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static('.')); // Serve static files
-app.use('/downloads', express.static('downloads')); // Serve APK files
+app.use(express.static('public')); // Serve static files from public folder
+app.use('/downloads', express.static('public/downloads')); // Serve APK files
 
 // Database configuration
 const dbConfig = {
